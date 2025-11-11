@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect('mongodb://mongo:27017/dockerlearn', {
+  .connect('process.env.MONGO_URI', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
